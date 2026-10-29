@@ -1,7 +1,9 @@
 name: second workflow
 
 on:
-    push
+    push:
+        branches:
+            - dev
 
 jobs:
     first_job:
