@@ -1,0 +1,24 @@
+name: Dev workflow
+
+on:
+    push:
+        branches:
+            - dev
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: print message
+              run: echo "hello world"
+            
+            - name: Build docker image
+              run: docker build -t demoapp .
+
+            - name: Run container
+              run: docker run -d -p 8080:80 demoapp
+            
+            
