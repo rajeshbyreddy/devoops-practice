@@ -10,7 +10,7 @@ jobs:
 
         steps:
             - name: list all files
-              run: ls
+              run: ls -a
             - name: current user
               run: whoami
 
