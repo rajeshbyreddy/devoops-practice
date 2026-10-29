@@ -1,0 +1,16 @@
+name: my first workflow
+
+on:
+    push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+
+
+        steps:
+            - name: list all files
+              run: ls
+            - name: current user
+              run: whoami
+
